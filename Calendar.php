@@ -917,46 +917,46 @@ class CalendarDuration {
 	
 	}
 
-	public function toString() { 
+	public function toString() {
 		$output = $this->toStringYMD();
-		if($this->hour > 0) {
+		if($this->_hour > 0) {
 			$output .= (strlen($output) > 0) ? ", " : "";
 			$output .= $this->_hour . " hour";
 			$output .= ($this->_hour > 1) ? "s" : "";
 		}
-		
-		if($this->minute > 0) {
+
+		if($this->_minute > 0) {
 			$output .= (strlen($output) > 0) ? ", " : "";
 			$output .= $this->_minute . " minute";
 			$output .= ($this->_minute > 1) ? "s" : "";
 		}
-		
-		if($this->second > 0) {
+
+		if($this->_second > 0) {
 			$output .= (strlen($output) > 0) ? ", " : "";
 			$output .= $this->_second . " second";
 			$output .= ($this->_second > 1) ? "s" : "";
 		}
-		
+
 		if(strlen($output) < 1 ) {
 			return "0 seconds";
 		}
 		return $output;
 	}
 
-	public function toStringYMD() { 
+	public function toStringYMD() {
 		$output = "";
-		if($this->year > 0) {
+		if($this->_year > 0) {
 			$output .= $this->_year . " year";
 			$output .= ($this->_year > 1) ? "s" : "";
 		}
 
-		if($this->month > 0) {
+		if($this->_month > 0) {
 			$output .= (strlen($output) > 0) ? ", " : "";
 			$output .= $this->_month . " month";
 			$output .= ($this->_month > 1) ? "s" : "";
 		}
 
-		if($this->day > 0) {
+		if($this->_day > 0) {
 			$output .= (strlen($output) > 0) ? ", " : "";
 			$output .= $this->_day . " day";
 			$output .= ($this->_day > 1) ? "s" : "";
