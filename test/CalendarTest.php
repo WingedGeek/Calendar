@@ -7,7 +7,7 @@
 */
 
 
-require __DIR__ . "/../Calendar.php";
+require __DIR__ . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "Calendar.php";
 
 use PHPUnit\Framework\TestCase;
 

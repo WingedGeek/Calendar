@@ -1,0 +1,5 @@
+% wget https://phpdoc.org/phpDocumentor.phar
+% sudo mv phpDocumentor.phar /usr/local/bin
+% sudo chmod +x /usr/local/bin/phpDocumentor.phar
+% sudo ln -s /usr/local/bin/phpDocumentor.phar /usr/local/bin/phpdoc
+% phpdoc -d . -t docs/api

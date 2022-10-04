@@ -252,9 +252,8 @@ class Calendar {
 	 *
 	 *
 	 */
-
-	// TODO rewrite this to return a class that includes whatever values (0 if beyond the duration; e.g., July 2 to July 4 won't have week, month, year, set...)
 	public static function calculateDuration( Calendar $a, Calendar $b, int $precision_start = Calendar::YEAR, int $precision_end = Calendar::SECOND) {
+		// TODO rewrite this to return a class that includes whatever values (0 if beyond the duration; e.g., July 2 to July 4 won't have week, month, year, set...)
 		$retval = new CalendarDuration();
 		if ( $a->compareTo($b) == 0 ) {
 			return $retval;
