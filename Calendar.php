@@ -2,7 +2,13 @@
 /**
 	2021.12.27 wingedgeek heavily influenced by Java's Calendar module
     PHP 7.1+
+ 	Internally uses PHP's time() (seconds since epoch) and GMT:	https://www.php.net/manual/en/function.time.php
+ 	A lot of this is probably redundant with DateTimeImmutable and DateInterval and I should probably re-implement this as essentially an abstraction layer.
+ 	Don't use this code for anything. :)
+
 */
+
+// TODO timezone support	https://www.php.net/manual/en/datetimezone.gettransitions.php https://www.php.net/manual/en/class.datetimezone.php
 
 class Calendar {
 	private $_year;
@@ -848,6 +854,8 @@ U 	Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT) 	See also time()
 
 */
 
+
+// TODO Nuke this and just use an associative array?
 class CalendarDuration {
 	private $_year = 0;
 	private $_month = 0;
